@@ -141,7 +141,7 @@ const CONFIG={
   HERO_IMG:"logo-truong.png",        // ví dụ "hero.jpg"
   LOCAL_VIDEOS:[],
   ADDRESS:"Cơ sở chính: Số 594 Lê Duẩn, Phường Ea Kao, Tỉnh Đắk Lắk <br> Cơ sở số 2: Số 276 Trường Chinh, Phường Tuy Hòa, Tỉnh Đắk Lắk <br> Cơ sở số 3: Thôn Xuân Dục, Phường Bình Kiến, Tỉnh Đắk Lắk <br> Cơ sở 4: Số 30 Y Ngông, Phường Buôn Ma Thuột, Tỉnh Đắk Lắk",
-  SOCIAL:{fb:"https://www.facebook.com/doantruongcddaklak",yt:"",tt:""},
+  SOCIAL:{fb:"https://www.facebook.com/doantruongcddaklak",yt:"",tt:"",td:"https://web-thi-dua-xi.vercel.app/"},
   QUOTE:"Tháng 11 không chỉ là mùa tri ân, mà còn là dịp để chúng ta nhìn lại, trân trọng và tiếp thêm động lực trên hành trình trưởng thành.",
   SLOGAN:"Tri ân hôm nay – Vững bước ngày mai"
 };
@@ -261,7 +261,7 @@ addEventListener("DOMContentLoaded",()=>{
   document.body.insertAdjacentHTML("afterbegin",SF);
   if(CONFIG.LOGO){$("#lg").style.backgroundImage=`url(${CONFIG.LOGO})`;$("#lg").textContent=""}
   $("#pl").onclick=e=>{e.preventDefault();play()};$("#ad").innerHTML=CONFIG.ADDRESS;$("#sg").textContent=CONFIG.SLOGAN;
-  $("#so").innerHTML=[["fb","Facebook"],["yt","YouTube"],["tt","TikTok"]].filter(([k])=>CONFIG.SOCIAL[k]).map(([k,n])=>`<a href="${esc(CONFIG.SOCIAL[k])}" target="_blank" rel="noopener">${n}</a>`).join("");
+  $("#so").innerHTML=[["fb","Facebook"],["yt","YouTube"],["tt","TikTok"],["td","Quản lý thi đua"]].filter(([k])=>CONFIG.SOCIAL[k]).map(([k,n])=>`<a href="${esc(CONFIG.SOCIAL[k])}" target="_blank" rel="noopener">${n}</a>`).join("");
   route();
 });
 addEventListener("hashchange",route);
