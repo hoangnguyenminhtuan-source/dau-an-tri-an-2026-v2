@@ -261,7 +261,7 @@ addEventListener("DOMContentLoaded",()=>{
   document.body.insertAdjacentHTML("afterbegin",SF);
   if(CONFIG.LOGO){$("#lg").style.backgroundImage=`url(${CONFIG.LOGO})`;$("#lg").textContent=""}
   $("#pl").onclick=e=>{e.preventDefault();play()};$("#ad").innerHTML=CONFIG.ADDRESS;$("#sg").textContent=CONFIG.SLOGAN;
-  $("#so").innerHTML=[["fb","Facebook Đoàn Trường"],["yt","YouTube"],["tt","TikTok"],["td","Phần mềm Quản lý thi đua Đoàn trường"]].filter(([k])=>CONFIG.SOCIAL[k]).map(([k,n])=>`<a href="${esc(CONFIG.SOCIAL[k])}" target="_blank" rel="noopener">${n}</a>`).join("");
+  $("#so").innerHTML=[["fb","Facebook"],["yt","YouTube"],["tt","TikTok"],["td","Phần mềm Quản lý thi đua Đoàn trường"]].filter(([k])=>CONFIG.SOCIAL[k]).map(([k,n])=>`<a href="${esc(CONFIG.SOCIAL[k])}" target="_blank" rel="noopener">${n}</a>`).join("");
   route();
 });
 addEventListener("hashchange",route);
